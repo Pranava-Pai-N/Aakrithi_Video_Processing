@@ -7,9 +7,11 @@ from pytesseract import image_to_string
 import cv2
 from transformers import BlipProcessor, BlipForConditionalGeneration
 from collections import Counter
+from pytesseract import pytesseract
 
 clip_model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
 clip_processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
+pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
 
 blip_processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-base")
 blip_model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-captioning-base")
