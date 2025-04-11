@@ -10,3 +10,4 @@ scikit-learn
 fastapi[all]
 tqdm
 numpy
+libgl1
