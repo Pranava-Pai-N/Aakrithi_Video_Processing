@@ -5,7 +5,6 @@ from PIL import Image
 import cv2
 from collections import Counter
 
-# Load CLIP model and processor
 clip_model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
 clip_processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
 
@@ -40,7 +39,7 @@ def classify_frame_with_clip(image):
     return texts[pred]
 
 def classify_video(video_path):
-    frames = extract_frames(video_path, frame_rate=5)  # Fewer frames for speed
+    frames = extract_frames(video_path, frame_rate=5)  
 
     clip_preds = []
 
