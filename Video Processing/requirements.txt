@@ -2,7 +2,7 @@ fastapi
 uvicorn
 torch
 transformers
-opencv-python
+opencv-python-headless
 pillow
 pytesseract
 python-multipart
@@ -10,4 +10,3 @@ scikit-learn
 fastapi[all]
 tqdm
 numpy
-libgl1
