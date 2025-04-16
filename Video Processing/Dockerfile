@@ -1,6 +1,5 @@
 FROM python:3.11
 
-# Add apt repositories and install system packages
 USER root
 
 RUN apt-get update && apt-get install -y \
@@ -9,7 +8,6 @@ RUN apt-get update && apt-get install -y \
     ffmpeg \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Continue with Python packages and user permissions
 RUN useradd -m -u 1000 user
 USER user
 ENV PATH="/home/user/.local/bin:$PATH"
